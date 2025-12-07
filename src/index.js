@@ -11,7 +11,7 @@ import Update from './update';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/crud1">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/insert" element={<Insert />} />
