@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.960b144f.js",
-    "index.html": "/index.html",
-    "main.960b144f.js.map": "/static/js/main.960b144f.js.map"
+    "main.js": "/crud1/static/js/main.960b144f.js",
+    "index.html": "/crud1/index.html",
+    "main.960b144f.js.map": "/crud1/static/js/main.960b144f.js.map"
   },
   "entrypoints": [
     "static/js/main.960b144f.js"
