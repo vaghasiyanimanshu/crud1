@@ -41,36 +41,38 @@ function View() {
             <div className="view-container">
                 <h2 className="view-title">User List</h2>
 
-                <table className="view-table">
-                    <thead>
-                        <tr>
-                            <th>NO</th>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Password</th>
-                            <th>Delete</th>
-                            <th>Update</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        {info.map((e, index) => (
-                            <tr key={e.id}>
-                                <td>{index + 1}</td>
-                                <td>{e.id}</td>
-                                <td>{e.name}</td>
-                                <td>{e.email}</td>
-                                <td>{e.password}</td>
-                                <td><button onClick={() => remove(e.id)}>Delete</button></td>
-                                <td><button onClick={() => nav(`/update/${e.id}`)}>Update</button></td>
-                                
+                <div className="table-container">
+                    <table className="view-table">
+                        <thead>
+                            <tr>
+                                <th>NO</th>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Password</th>
+                                <th>Delete</th>
+                                <th>Update</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
 
-                <button className="btn btn-logout" onClick={() => {localStorage.removeItem("login"); nav("/");}}>Logout</button>
+                        <tbody>
+                            {info.map((e, index) => (
+                                <tr key={e.id}>
+                                    <td>{index + 1}</td>
+                                    <td>{e.id}</td>
+                                    <td>{e.name}</td>
+                                    <td>{e.email}</td>
+                                    <td>{e.password}</td>
+                                    <td><button onClick={() => remove(e.id)}>Delete</button></td>
+                                    <td><button onClick={() => nav(`/update/${e.id}`)}>Update</button></td>
+
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+
+                <button className="btn btn-logout" onClick={() => { localStorage.removeItem("login"); nav("/"); }}>Logout</button>
             </div>
         </>
     );

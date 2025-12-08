@@ -78,7 +78,7 @@
 
 /* Insert.css */
 
-.form-container {
+.insert-container {
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
@@ -87,43 +87,43 @@
   background-color: #fff;
 }
 
-.form-title {
+.insert-title {
   text-align: center;
   margin-bottom: 20px;
   font-family: Arial, sans-serif;
   color: #333;
 }
 
-.form-card {
+.insert-card {
   display: flex;
   flex-direction: column;
 }
 
-.form-group {
+.insert-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
-.form-group label {
+.insert-group label {
   margin-bottom: 5px;
   font-weight: 500;
 }
 
-.form-group input {
+.insert-group input {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
 }
 
-.form-group input:focus {
+.insert-group input:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-.form-actions {
+.insert-actions {
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -154,6 +154,59 @@
 .btn-secondary:hover {
   background-color: #5a6268;
 }
+
+/* Position the button over the input on the right */
+.insert-group {
+  position: relative;
+  /* needed to position button inside input */
+}
+
+/* Password input styling */
+.insert-group input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  /* add space on the right for button */
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Hide/unhide button styling */
+.insert-group {
+  position: relative;
+}
+
+.insert-group input {
+  width: 100%;
+  padding: 12px 45px 12px 12px;
+  /* space for show button */
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.insert-group button {
+  position: absolute;
+  right: 12px;
+  top: 70%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0d6efd;
+  padding: 0;
+}
+
+.insert-group button:hover {
+  color: #084298;
+}
+
+
+
 
 
 
@@ -186,19 +239,19 @@
   color: #333;
 }
 
-.form-group {
+.login-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 18px;
 }
 
-.form-group label {
+.login-group label {
   margin-bottom: 6px;
   font-weight: 500;
   color: #555;
 }
 
-.form-group input {
+.login-group input {
   padding: 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -206,7 +259,7 @@
   transition: all 0.3s ease;
 }
 
-.form-group input:focus {
+.login-group input:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
@@ -243,6 +296,28 @@
 
 .create-link:hover {
   text-decoration: underline;
+}
+
+
+/* ✅ MOBILE RESPONSIVE FIX */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .login-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px;
+  }
 }
 
 
@@ -318,54 +393,36 @@
   background-color: #5a6268;
 }
 
+/* ✅ MOBILE RESPONSIVE FIX FOR VIEW */
 
-
-/* Position the button over the input on the right */
-.form-group {
-  position: relative;
-  /* needed to position button inside input */
-}
-
-/* Password input styling */
-.form-group input {
+.table-container {
   width: 100%;
-  padding: 10px 40px 10px 10px;
-  /* add space on the right for button */
-  font-size: 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+  overflow-x: auto;
 }
 
-/* Hide/unhide button styling */
-.form-group {
-  position: relative;
-}
+@media (max-width: 600px) {
+  .view-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
 
-.form-group input {
-  width: 100%;
-  padding: 12px 45px 12px 12px;
-  /* space for show button */
-  font-size: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+  .view-title {
+    font-size: 20px;
+  }
 
-.form-group button {
-  position: absolute;
-  right: 12px;
-  top: 70%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  color: #0d6efd;
-  padding: 0;
-}
+  .view-table th,
+  .view-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
 
-.form-group button:hover {
-  color: #084298;
+  .btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .btn-logout {
+    width: 100%;
+    margin-top: 12px;
+  }
 }

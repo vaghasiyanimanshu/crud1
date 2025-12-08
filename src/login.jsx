@@ -53,12 +53,12 @@ const Login = () => {
 
                     <form onSubmit={handle}>
 
-                        <div className="form-group">
+                        <div className="login-group">
                             <label>Email</label>
                             <input type="email" ref={email} placeholder="Enter your email" required />
                         </div>
 
-                        <div className="form-group">
+                        <div className="login-group">
                             <label>Password</label>
                             <input type={showPassword ? "text" : "password"} ref={password} placeholder="Enter your password" required />
                             <button type="button" onClick={() => setShowPassword(!showPassword)}>

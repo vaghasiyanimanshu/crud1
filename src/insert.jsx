@@ -27,22 +27,22 @@ const Insert = () => {
             });
     };
     return (
-        <div className="form-container">
-            <h2 className="form-title">Insert User</h2>
-            <form onSubmit={handle} className="form-card">
-                <div className="form-group">
+        <div className="insert-container">
+            <h2 className="insert-title">Insert User</h2>
+            <form onSubmit={handle} className="insert-card">
+                <div className="insert-group">
                     <label>Name:</label>
                     <input type="text" ref={name} placeholder="Enter name" required />
                 </div>
-                <div className="form-group">
+                <div className="insert-group">
                     <label>Email:</label>
                     <input type="email" ref={email} placeholder="Enter email" required />
                 </div>
-                <div className="form-group">
+                <div className="insert-group">
                     <label>Password:</label>
                     <input type="password" ref={password} placeholder="Enter password" required />
                 </div>
-                <div className="form-actions">
+                <div className="insert-actions">
                     <button type="submit" className="btn btn-primary">Add User</button>
                     <button type="reset" className="btn btn-secondary">Clear</button>
                 </div>
