@@ -4,14 +4,14 @@ import ReactDOM from "react-dom/client";
 import View from './view';
 import Insert from './insert';
 import Login from './login';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {  HashRouter, Route, Routes } from 'react-router-dom';
 import Update from './update';
 // import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/crud1">
+    <HashRouter basename="/crud1">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/insert" element={<Insert />} />
@@ -19,7 +19,7 @@ root.render(
         <Route path="/update/:id" element={<Update />} />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
